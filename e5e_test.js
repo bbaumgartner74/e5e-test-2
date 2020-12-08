@@ -10,11 +10,11 @@ exports.myfunction = (event, context) => {
   let payload = "No payload.";
 
   if (event.params !== null) {
-    if (event.params.city !== null) {
+    if (event.params.city) {
       city = event.params.city[0];
     }
 
-    if (event.params.user !== null) {
+    if (event.params.user) {
       user = event.params.user[0];
     }
     if (event.data !== null && event.data.message) {
