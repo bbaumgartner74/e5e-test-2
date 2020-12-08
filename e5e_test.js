@@ -17,8 +17,8 @@ exports.myfunction = (event, context) => {
     if (event.params.user !== null) {
       user = event.params.user[0];
     }
-    if (event.data !== null) {
-      payload = event.data;
+    if (event.data !== null && event.data.message) {
+      payload = event.data.message;
     }
   }
 
