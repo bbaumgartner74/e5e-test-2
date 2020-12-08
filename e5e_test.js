@@ -10,8 +10,8 @@ exports.myfunction = (event, context) => {
   let payload = "No payload.";
 
   if (event.params !== null) {
-    if (event.params.cities !== null) {
-      city = event.params.cities[0];
+    if (event.params.city !== null) {
+      city = event.params.city[0];
     }
 
     if (event.params.user !== null) {
@@ -23,6 +23,6 @@ exports.myfunction = (event, context) => {
   }
 
   return {
-    data: `Hello ${user}, you live in ${city}! Payload: ${payload} :::`,
+    data: `Hello ${user}, you live in ${city}! Message: ${payload}.`,
   };
 };
