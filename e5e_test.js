@@ -9,6 +9,6 @@ exports.myfunction = (event, context) => {
   
 
   return {
-    data: `Hello ${user}, you live in cities[0]!`,
+    data: `Hello ${user}, you live in ${cities[0]}!`,
   };
 };
