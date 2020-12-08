@@ -23,8 +23,6 @@ exports.myfunction = (event, context) => {
     payload = data
   }
 
-  let user = event.params.user[0];
-
   return {
     data: `Hello ${user}, you live in ${city}! Payload: ${payload} :::`,
   };
