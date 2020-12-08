@@ -4,11 +4,28 @@
 exports.myfunction = (event, context) => {
   console.log(event);
   console.log(context);
-  
-  let cities = event.params.cities;
-  let user = event.params.user[0]
+
+  let city = "Timbuktu"
+  let user = "Nobody"
+  let payload = "No payload."
+
+  if (params !== null) {
+    if (cities !== null) {
+      city = event.params.cities[0];
+    } 
+
+    if (user !== null) {
+      user = event.params.user[0];
+    } 
+  }
+
+  if(data !== null){
+    payload = data
+  }
+
+  let user = event.params.user[0];
 
   return {
-    data: `Hello ${user}, you live in ${cities[0]}!`,
+    data: `Hello ${user}, you live in ${city}! Payload: ${payload} :::`,
   };
 };
