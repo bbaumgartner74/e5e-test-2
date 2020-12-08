@@ -6,6 +6,6 @@ exports.myfunction = (event, context) => {
   console.log(`context: ${context}`);
 
   return {
-    data: `Hello ${user}!`,
+    data: `Hello ${user}, you are awesome!`,
   };
 };
