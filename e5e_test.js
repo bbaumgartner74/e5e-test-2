@@ -4,8 +4,11 @@ const user = process.env.USER;
 exports.myfunction = (event, context) => {
   console.log(event);
   console.log(context);
+  
+  let cities = event.params.cities;
+  
 
   return {
-    data: `Hello ${user}, you are awesome!`,
+    data: `Hello ${user}, you live in cities[0]!`,
   };
 };
