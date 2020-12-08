@@ -7,7 +7,7 @@ exports.myfunction = (event, context) => {
 
   let city = "Timbuktu";
   let user = "Nobody";
-  let payload = "No payload.";
+  let payload = "No payload";
 
   if (event.params !== null) {
     if (event.params.city) {
