@@ -1,9 +1,7 @@
 const user = process.env.USER;
-console.log(user);
 
 exports.myfunction = (event, context) => {
-  console.log(`event: ${event}`);
-  console.log(`context: ${context}`);
+  console.log(`User: ${user}`);
   
   return {
     data: `Hello ${user}!`,
